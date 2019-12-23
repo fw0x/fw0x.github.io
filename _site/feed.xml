@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-18T21:50:21+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">fw0x</title><subtitle>Stay hungry, stay foolish.</subtitle><entry><title type="html">【60天重学左耳】Day03-分布式系统关键技术之全栈监控</title><link href="http://localhost:4000/code/2019/12/18/cxze60-day03.html" rel="alternate" type="text/html" title="【60天重学左耳】Day03-分布式系统关键技术之全栈监控" /><published>2019-12-18T20:00:00+08:00</published><updated>2019-12-18T20:00:00+08:00</updated><id>http://localhost:4000/code/2019/12/18/cxze60-day03</id><content type="html" xml:base="http://localhost:4000/code/2019/12/18/cxze60-day03.html">&lt;p&gt;&lt;a href=&quot;https://time.geekbang.org/column/article/177414?utm_term=zeusL3AA0&amp;amp;utm_source=wechat&amp;amp;utm_medium=chongxuedaka&quot;&gt;左耳朵耗子带你重学《左耳听风》&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-23T23:06:39+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">fw0x</title><subtitle>Stay hungry, stay foolish.</subtitle><entry><title type="html">【60天重学左耳】Day08-洞悉PaaS平台的本质</title><link href="http://localhost:4000/code/2019/12/23/cxze60-day08.html" rel="alternate" type="text/html" title="【60天重学左耳】Day08-洞悉PaaS平台的本质" /><published>2019-12-23T22:00:00+08:00</published><updated>2019-12-23T22:00:00+08:00</updated><id>http://localhost:4000/code/2019/12/23/cxze60-day08</id><content type="html" xml:base="http://localhost:4000/code/2019/12/23/cxze60-day08.html">&lt;p&gt;&lt;a href=&quot;https://time.geekbang.org/column/article/177414?utm_term=zeusL3AA0&amp;amp;utm_source=wechat&amp;amp;utm_medium=chongxuedaka&quot;&gt;左耳朵耗子带你重学《左耳听风》&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;打卡Day8：今天学习了《27｜洞悉PaaS平台的本质》，我的收获如下：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;软件工程能力主要体现在：提高服务的SLA、能力和资源重用或复用、过程的自动化。&lt;/li&gt;
+  &lt;li&gt;PaaS平台的本质：服务化（模块重用、服务治理、对外提供能力）、分布式（多租户隔离、高可用、服务编排）、自动化（自动化部署安装运维、自动化伸缩调度）。&lt;/li&gt;
+  &lt;li&gt;PaaS平台的总体架构：调度层（自动化和分布式对于高可用高性能的管理）、能力服务层（提供给用户的服务和能力）、流量调度（对高并发的管理）、运营管理（软件资源库、软件接入、认证和开放平台门户）、运维管理（DevOps）。&lt;/li&gt;
+  &lt;li&gt;PaaS平台的生产和运维流程：软件构建 =&amp;gt; 软件资产库（Docker Registry） =&amp;gt; DevOps =&amp;gt; 架构控制器 =&amp;gt; 生产环境 =&amp;gt; Docker+Kubernetes集群 =&amp;gt; 软件部署和生产变更。&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">左耳朵耗子带你重学《左耳听风》</summary></entry><entry><title type="html">【60天重学左耳】Day05-分布式系统关键技术：流量与数据调度</title><link href="http://localhost:4000/code/2019/12/20/cxze60-day05.html" rel="alternate" type="text/html" title="【60天重学左耳】Day05-分布式系统关键技术：流量与数据调度" /><published>2019-12-20T21:00:00+08:00</published><updated>2019-12-20T21:00:00+08:00</updated><id>http://localhost:4000/code/2019/12/20/cxze60-day05</id><content type="html" xml:base="http://localhost:4000/code/2019/12/20/cxze60-day05.html">&lt;p&gt;&lt;a href=&quot;https://time.geekbang.org/column/article/177414?utm_term=zeusL3AA0&amp;amp;utm_source=wechat&amp;amp;utm_medium=chongxuedaka&quot;&gt;左耳朵耗子带你重学《左耳听风》&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;打卡Day5：今天学习了《26｜分布式系统关键技术：流量与数据调度》，我的收获如下：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;服务治理与流量调度的区别：服务治理主内，是数据中心的事，流量调度主内也主外，是数据中心之外的事，也就是边缘计算如CDN。&lt;/li&gt;
+  &lt;li&gt;流量调度主要完成：服务流控（服务的发现、路由、降级、熔断、保护）、流量控制（负载均衡、流量分配、异地灾备或多活）、流量管理（协议转换、请求校验、数据缓存、数据计算），这些通常由API Gateway搞定。&lt;/li&gt;
+  &lt;li&gt;流量调度的关键技术：高性能（使用高性能语言）、扛流量（集群、通讯协议如Paxos、Raft、Gossip）、业务逻辑（可注入不同语言的简单逻辑如AWS的Lambda）、服务化（提供Admin API管理配置变更）。&lt;/li&gt;
+  &lt;li&gt;状态数据调度，一般会把有状态的服务数据存储到中间件上，比如Redis、MySQL、ZooKeeper、或是NFS、Ceph等文件系统。&lt;/li&gt;
+  &lt;li&gt;数据副本是分布式系统解决数据丢失异常的手段：让数据高可用就得写多份的，写多份就会引起一致性问题，解决一致性又会引发性能问题。&lt;/li&gt;
+  &lt;li&gt;解决数据副本间的一致性问题的技术方案：Master-Slave、Master-Master、两阶段和三阶段提交、Paxos。解决事务问题，在应用层上首选两阶段提交、在数据层上首选Paxos。&lt;/li&gt;
+  &lt;li&gt;状态数据调度由分布式存储系统来解决会更有效和优雅，分库分表的数据库中间件都会成为过渡技术。在Iaas层解决的方法：廉价的开源产品如NFS、Ceph、TiDB、CockroachDB、ElasticSearch、InfluxDB、MySQL Cluster、Redis Cluster；云计算厂商方案；更为昂贵的商业网络存储方案。&lt;/li&gt;
+  &lt;li&gt;因为数据存储的Scheme不同，导致有各式各样的分布式存储系统：文件对象、关系型数据库、NoSQL、时序数据、搜索数据、队列数据。&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">左耳朵耗子带你重学《左耳听风》</summary></entry><entry><title type="html">【60天重学左耳】Day04-分布式系统关键技术：服务调度</title><link href="http://localhost:4000/code/2019/12/19/cxze60-day04.html" rel="alternate" type="text/html" title="【60天重学左耳】Day04-分布式系统关键技术：服务调度" /><published>2019-12-19T20:00:00+08:00</published><updated>2019-12-19T20:00:00+08:00</updated><id>http://localhost:4000/code/2019/12/19/cxze60-day04</id><content type="html" xml:base="http://localhost:4000/code/2019/12/19/cxze60-day04.html">&lt;p&gt;&lt;a href=&quot;https://time.geekbang.org/column/article/177414?utm_term=zeusL3AA0&amp;amp;utm_source=wechat&amp;amp;utm_medium=chongxuedaka&quot;&gt;左耳朵耗子带你重学《左耳听风》&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;打卡Day4：今天学习了《25｜分布式系统关键技术：服务调度》，我的收获如下：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;服务调度的关键技术：关键程度、依赖关系、服务发现、版本管理、生命周期管理。&lt;/li&gt;
+  &lt;li&gt;服务关键程度，通过细致管理对业务的理解来定义。&lt;/li&gt;
+  &lt;li&gt;微服务是服务依赖最优解的上限，下限是千万不要有依赖环。&lt;/li&gt;
+  &lt;li&gt;服务依赖关系可以通过Zipkin服务调用跟踪系统来梳理。&lt;/li&gt;
+  &lt;li&gt;服务注册中心用来知道：服务数量、服务版本、服务实例数量及状态、服务总体状态。&lt;/li&gt;
+  &lt;li&gt;服务状态包括：Provision、Ready、Run、Update、Rollback、Scale、Destroy、Failed。&lt;/li&gt;
+  &lt;li&gt;版本管理，即由一堆服务的版本所形成的整个架构的版本控制，用以解决各个服务的版本兼容问题。使用场景如，回滚一个服务的版本，就要把与之有版本依赖的服务也一起回滚。&lt;/li&gt;
+  &lt;li&gt;服务调度的关键技术：服务状态的维持和拟合、弹性伸缩和故障迁移、作业和应用调度、作业工作流编排、服务编排。&lt;/li&gt;
+  &lt;li&gt;服务运行中状态的变化包括：不预期变化（如故障导致服务挂掉）、预期变化（如发布新版本）。&lt;/li&gt;
+  &lt;li&gt;Scale一般步骤：扩展结点 -&amp;gt; 部署服务 -&amp;gt; 启动服务 -&amp;gt; 检查健康 -&amp;gt; 加入服务发现。&lt;/li&gt;
+  &lt;li&gt;拟合：控制系统进行若干次操作，努力逼近最终状态、直到完全达到的过程。&lt;/li&gt;
+  &lt;li&gt;故障恢复的模式：宠物模式（一定要救活，主要是对于有状态服务）、奶牛模式（重新生成一个实例）。&lt;/li&gt;
+  &lt;li&gt;微服务一般使用API网关或消息队列来做编排（Orchestration）。&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">左耳朵耗子带你重学《左耳听风》</summary></entry><entry><title type="html">【60天重学左耳】Day03-分布式系统关键技术：全栈监控</title><link href="http://localhost:4000/code/2019/12/18/cxze60-day03.html" rel="alternate" type="text/html" title="【60天重学左耳】Day03-分布式系统关键技术：全栈监控" /><published>2019-12-18T20:00:00+08:00</published><updated>2019-12-18T20:00:00+08:00</updated><id>http://localhost:4000/code/2019/12/18/cxze60-day03</id><content type="html" xml:base="http://localhost:4000/code/2019/12/18/cxze60-day03.html">&lt;p&gt;&lt;a href=&quot;https://time.geekbang.org/column/article/177414?utm_term=zeusL3AA0&amp;amp;utm_source=wechat&amp;amp;utm_medium=chongxuedaka&quot;&gt;左耳朵耗子带你重学《左耳听风》&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;打卡Day3：今天学习了《24｜分布式系统关键技术：全栈监控》，我的收获如下：&lt;/p&gt;
 
