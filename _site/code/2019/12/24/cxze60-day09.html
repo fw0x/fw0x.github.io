@@ -3,19 +3,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>【60天重学左耳】Day04-分布式系统关键技术：服务调度 | fw0x</title>
+<title>【60天重学左耳】Day09-弹力设计篇之“认识故障和弹力设计” | fw0x</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="【60天重学左耳】Day04-分布式系统关键技术：服务调度" />
+<meta property="og:title" content="【60天重学左耳】Day09-弹力设计篇之“认识故障和弹力设计”" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="左耳朵耗子带你重学《左耳听风》" />
 <meta property="og:description" content="左耳朵耗子带你重学《左耳听风》" />
-<link rel="canonical" href="http://localhost:4000/code/2019/12/19/cxze60-day04.html" />
-<meta property="og:url" content="http://localhost:4000/code/2019/12/19/cxze60-day04.html" />
+<link rel="canonical" href="http://localhost:4000/code/2019/12/24/cxze60-day09.html" />
+<meta property="og:url" content="http://localhost:4000/code/2019/12/24/cxze60-day09.html" />
 <meta property="og:site_name" content="fw0x" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-12-19T20:00:00+08:00" />
+<meta property="article:published_time" content="2019-12-24T23:30:00+08:00" />
 <script type="application/ld+json">
-{"description":"左耳朵耗子带你重学《左耳听风》","headline":"【60天重学左耳】Day04-分布式系统关键技术：服务调度","dateModified":"2019-12-19T20:00:00+08:00","datePublished":"2019-12-19T20:00:00+08:00","@type":"BlogPosting","url":"http://localhost:4000/code/2019/12/19/cxze60-day04.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/code/2019/12/19/cxze60-day04.html"},"@context":"https://schema.org"}</script>
+{"description":"左耳朵耗子带你重学《左耳听风》","headline":"【60天重学左耳】Day09-弹力设计篇之“认识故障和弹力设计”","dateModified":"2019-12-24T23:30:00+08:00","datePublished":"2019-12-24T23:30:00+08:00","@type":"BlogPosting","url":"http://localhost:4000/code/2019/12/24/cxze60-day09.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/code/2019/12/24/cxze60-day09.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="fw0x" /></head>
 <body><header class="site-header" role="banner">
@@ -38,35 +38,28 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">【60天重学左耳】Day04-分布式系统关键技术：服务调度</h1>
+    <h1 class="post-title p-name" itemprop="name headline">【60天重学左耳】Day09-弹力设计篇之“认识故障和弹力设计”</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="2019-12-19T20:00:00+08:00" itemprop="datePublished">Dec 19, 2019
+      <time class="dt-published" datetime="2019-12-24T23:30:00+08:00" itemprop="datePublished">Dec 24, 2019
       </time></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
     <p><a href="https://time.geekbang.org/column/article/177414?utm_term=zeusL3AA0&amp;utm_source=wechat&amp;utm_medium=chongxuedaka">左耳朵耗子带你重学《左耳听风》</a></p>
 
-<p>打卡Day4：今天学习了《25｜分布式系统关键技术：服务调度》，我的收获如下：</p>
+<p>打卡Day9：今天学习了《41｜弹力设计篇之“认识故障和弹力设计”》，我的收获如下：</p>
 
 <ol>
-  <li>服务调度的关键技术：关键程度、依赖关系、服务发现、版本管理、生命周期管理。</li>
-  <li>服务关键程度，通过细致管理对业务的理解来定义。</li>
-  <li>微服务是服务依赖最优解的上限，下限是千万不要有依赖环。</li>
-  <li>服务依赖关系可以通过Zipkin服务调用跟踪系统来梳理。</li>
-  <li>服务注册中心用来知道：服务数量、服务版本、服务实例数量及状态、服务总体状态。</li>
-  <li>服务状态包括：Provision、Ready、Run、Update、Rollback、Scale、Destroy、Failed。</li>
-  <li>版本管理，即由一堆服务的版本所形成的整个架构的版本控制，用以解决各个服务的版本兼容问题。使用场景如，回滚一个服务的版本，就要把与之有版本依赖的服务也一起回滚。</li>
-  <li>服务调度的关键技术：服务状态的维持和拟合、弹性伸缩和故障迁移、作业和应用调度、作业工作流编排、服务编排。</li>
-  <li>服务运行中状态的变化包括：不预期变化（如故障导致服务挂掉）、预期变化（如发布新版本）。</li>
-  <li>Scale一般步骤：扩展结点 -&gt; 部署服务 -&gt; 启动服务 -&gt; 检查健康 -&gt; 加入服务发现。</li>
-  <li>拟合：控制系统进行若干次操作，努力逼近最终状态、直到完全达到的过程。</li>
-  <li>故障恢复的模式：宠物模式（一定要救活，主要是对于有状态服务）、奶牛模式（重新生成一个实例）。</li>
-  <li>微服务一般使用API网关或消息队列来做编排（Orchestration）。</li>
+  <li>分布式系统关键的设计模式：容错（弹力Resiliency）、性能、管理。</li>
+  <li>弹力：系统在不健康、不顺，甚至出错的情况下有能力hold得住，挺得住，能在逆境中力挽狂澜。</li>
+  <li>系统可用性测量：Availability = MTTF / MTTR + MTTF​。MTTF 是 Mean Time To Failure，平均故障前的时间。MTTR 是 Mean Time To Recovery，平均修复时间。为了提高可用性，我们要么提高系统的无故障时间，要么减少系统的故障恢复时间。</li>
+  <li>故障原因：无计划的（系统级故障、数据和介质故障、自然灾害、人为破坏、供电问题）；有计划的（日常任务、运维相关、升级相关）。</li>
+  <li>故障原因分类：网络、性能、安全、运维、管理、硬件。</li>
+  <li>故障不可避免：故障是正常的，而且是常见的；故障是不可预测突发的，而且相当难缠。所以，不要尝试着去避免故障，而是要把处理故障的代码当成正常的功能做在架构里写在代码里。</li>
 </ol>
 
 
-  </div><a class="u-url" href="/code/2019/12/19/cxze60-day04.html" hidden></a>
+  </div><a class="u-url" href="/code/2019/12/24/cxze60-day09.html" hidden></a>
 </article>
 
       </div>

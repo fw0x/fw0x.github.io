@@ -3,19 +3,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>【60天重学左耳】Day04-分布式系统关键技术：服务调度 | fw0x</title>
+<title>【60天重学左耳】Day10-弹力设计篇之“隔离设计” | fw0x</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="【60天重学左耳】Day04-分布式系统关键技术：服务调度" />
+<meta property="og:title" content="【60天重学左耳】Day10-弹力设计篇之“隔离设计”" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="左耳朵耗子带你重学《左耳听风》" />
 <meta property="og:description" content="左耳朵耗子带你重学《左耳听风》" />
-<link rel="canonical" href="http://localhost:4000/code/2019/12/19/cxze60-day04.html" />
-<meta property="og:url" content="http://localhost:4000/code/2019/12/19/cxze60-day04.html" />
+<link rel="canonical" href="http://localhost:4000/code/2019/12/25/cxze60-day10.html" />
+<meta property="og:url" content="http://localhost:4000/code/2019/12/25/cxze60-day10.html" />
 <meta property="og:site_name" content="fw0x" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-12-19T20:00:00+08:00" />
+<meta property="article:published_time" content="2019-12-25T21:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"左耳朵耗子带你重学《左耳听风》","headline":"【60天重学左耳】Day04-分布式系统关键技术：服务调度","dateModified":"2019-12-19T20:00:00+08:00","datePublished":"2019-12-19T20:00:00+08:00","@type":"BlogPosting","url":"http://localhost:4000/code/2019/12/19/cxze60-day04.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/code/2019/12/19/cxze60-day04.html"},"@context":"https://schema.org"}</script>
+{"description":"左耳朵耗子带你重学《左耳听风》","headline":"【60天重学左耳】Day10-弹力设计篇之“隔离设计”","dateModified":"2019-12-25T21:00:00+08:00","datePublished":"2019-12-25T21:00:00+08:00","@type":"BlogPosting","url":"http://localhost:4000/code/2019/12/25/cxze60-day10.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/code/2019/12/25/cxze60-day10.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="fw0x" /></head>
 <body><header class="site-header" role="banner">
@@ -38,35 +38,31 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">【60天重学左耳】Day04-分布式系统关键技术：服务调度</h1>
+    <h1 class="post-title p-name" itemprop="name headline">【60天重学左耳】Day10-弹力设计篇之“隔离设计”</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="2019-12-19T20:00:00+08:00" itemprop="datePublished">Dec 19, 2019
+      <time class="dt-published" datetime="2019-12-25T21:00:00+08:00" itemprop="datePublished">Dec 25, 2019
       </time></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
     <p><a href="https://time.geekbang.org/column/article/177414?utm_term=zeusL3AA0&amp;utm_source=wechat&amp;utm_medium=chongxuedaka">左耳朵耗子带你重学《左耳听风》</a></p>
 
-<p>打卡Day4：今天学习了《25｜分布式系统关键技术：服务调度》，我的收获如下：</p>
+<p>打卡Day10：今天学习了《42｜弹力设计篇之“认识故障和弹力设计”》，我的收获如下：</p>
 
 <ol>
-  <li>服务调度的关键技术：关键程度、依赖关系、服务发现、版本管理、生命周期管理。</li>
-  <li>服务关键程度，通过细致管理对业务的理解来定义。</li>
-  <li>微服务是服务依赖最优解的上限，下限是千万不要有依赖环。</li>
-  <li>服务依赖关系可以通过Zipkin服务调用跟踪系统来梳理。</li>
-  <li>服务注册中心用来知道：服务数量、服务版本、服务实例数量及状态、服务总体状态。</li>
-  <li>服务状态包括：Provision、Ready、Run、Update、Rollback、Scale、Destroy、Failed。</li>
-  <li>版本管理，即由一堆服务的版本所形成的整个架构的版本控制，用以解决各个服务的版本兼容问题。使用场景如，回滚一个服务的版本，就要把与之有版本依赖的服务也一起回滚。</li>
-  <li>服务调度的关键技术：服务状态的维持和拟合、弹性伸缩和故障迁移、作业和应用调度、作业工作流编排、服务编排。</li>
-  <li>服务运行中状态的变化包括：不预期变化（如故障导致服务挂掉）、预期变化（如发布新版本）。</li>
-  <li>Scale一般步骤：扩展结点 -&gt; 部署服务 -&gt; 启动服务 -&gt; 检查健康 -&gt; 加入服务发现。</li>
-  <li>拟合：控制系统进行若干次操作，努力逼近最终状态、直到完全达到的过程。</li>
-  <li>故障恢复的模式：宠物模式（一定要救活，主要是对于有状态服务）、奶牛模式（重新生成一个实例）。</li>
-  <li>微服务一般使用API网关或消息队列来做编排（Orchestration）。</li>
+  <li>隔离设计Bulkheads，源于造船上的隔板技术，也就是船体水密舱。</li>
+  <li>系统分离的方式：按服务种类、按用户请求。</li>
+  <li>按服务种类分离：使用不同的域名、服务器和数据库，做到从接入层到应用层再到数据层三层完全隔离。</li>
+  <li>完全隔离的问题：跨业务板块调用性能会降低（响应时间）；数据合并复杂度变高；跨板块的服务交互变复杂；分布式事务问题。</li>
+  <li>按用户请求分离：同一个服务对于不同的用户进行冗余和隔离。</li>
+  <li>按服务种类和按用户请求分离可以融合，即多租户模式。三种做法：完全独立；独立的数据分区，共享的服务；共享的服务，共享的数据分区。</li>
+  <li>通过虚拟化技术（Hypervior如KVM，或是Linux Container如Docker）来实现物理资源的共享和成本的节约，并且可以做到几乎完全隔离。</li>
+  <li>隔离设计的重点：定义好隔离业务的大小和粒度；定义好要什么和不要什么（考虑系统的复杂度、成本、性能、资源使用）；跟高可用、重试、异步、消息中间件、流控、熔断等设计模式配套使用；自动化运维工具；能看到所有服务的监控系统。</li>
+  <li>找到一个合适的均衡方案，我们不可能做出一个什么都能满足的系统。</li>
 </ol>
 
 
-  </div><a class="u-url" href="/code/2019/12/19/cxze60-day04.html" hidden></a>
+  </div><a class="u-url" href="/code/2019/12/25/cxze60-day10.html" hidden></a>
 </article>
 
       </div>
