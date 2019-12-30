@@ -3,19 +3,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>【60天重学左耳】Day09-弹力设计篇之“认识故障和弹力设计” | fw0x</title>
+<title>【60天重学左耳】Day15-弹力设计篇之“补偿事务“ | fw0x</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="【60天重学左耳】Day09-弹力设计篇之“认识故障和弹力设计”" />
+<meta property="og:title" content="【60天重学左耳】Day15-弹力设计篇之“补偿事务“" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="左耳朵耗子带你重学《左耳听风》" />
 <meta property="og:description" content="左耳朵耗子带你重学《左耳听风》" />
-<link rel="canonical" href="http://localhost:4000/code/2019/12/24/cxze60-day09.html" />
-<meta property="og:url" content="http://localhost:4000/code/2019/12/24/cxze60-day09.html" />
+<link rel="canonical" href="http://localhost:4000/code/2019/12/30/cxze60-day15.html" />
+<meta property="og:url" content="http://localhost:4000/code/2019/12/30/cxze60-day15.html" />
 <meta property="og:site_name" content="fw0x" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-12-24T23:30:00+08:00" />
+<meta property="article:published_time" content="2019-12-30T20:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"左耳朵耗子带你重学《左耳听风》","datePublished":"2019-12-24T23:30:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/code/2019/12/24/cxze60-day09.html"},"@type":"BlogPosting","url":"http://localhost:4000/code/2019/12/24/cxze60-day09.html","headline":"【60天重学左耳】Day09-弹力设计篇之“认识故障和弹力设计”","dateModified":"2019-12-24T23:30:00+08:00","@context":"https://schema.org"}</script>
+{"description":"左耳朵耗子带你重学《左耳听风》","datePublished":"2019-12-30T20:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/code/2019/12/30/cxze60-day15.html"},"@type":"BlogPosting","url":"http://localhost:4000/code/2019/12/30/cxze60-day15.html","headline":"【60天重学左耳】Day15-弹力设计篇之“补偿事务“","dateModified":"2019-12-30T20:00:00+08:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="fw0x" /></head>
 <body><header class="site-header" role="banner">
@@ -38,28 +38,28 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">【60天重学左耳】Day09-弹力设计篇之“认识故障和弹力设计”</h1>
+    <h1 class="post-title p-name" itemprop="name headline">【60天重学左耳】Day15-弹力设计篇之“补偿事务“</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="2019-12-24T23:30:00+08:00" itemprop="datePublished">Dec 24, 2019
+      <time class="dt-published" datetime="2019-12-30T20:00:00+08:00" itemprop="datePublished">Dec 30, 2019
       </time></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
     <p><a href="https://time.geekbang.org/column/article/177414?utm_term=zeusL3AA0&amp;utm_source=wechat&amp;utm_medium=chongxuedaka">左耳朵耗子带你重学《左耳听风》</a></p>
 
-<p>打卡Day9：今天学习了《41｜弹力设计篇之“认识故障和弹力设计”》，我的收获如下：</p>
+<p>打卡Day15：今天学习了《46｜弹力设计篇之“补偿事务”》，我的收获如下：</p>
 
 <ol>
-  <li>分布式系统关键的设计模式：容错（弹力Resiliency）、性能、管理。</li>
-  <li>弹力：系统在不健康、不顺，甚至出错的情况下有能力hold得住，挺得住，能在逆境中力挽狂澜。</li>
-  <li>系统可用性测量：Availability = MTTF / MTTR + MTTF​。MTTF 是 Mean Time To Failure，平均故障前的时间。MTTR 是 Mean Time To Recovery，平均修复时间。为了提高可用性，我们要么提高系统的无故障时间，要么减少系统的故障恢复时间。</li>
-  <li>故障原因：无计划的（系统级故障、数据和介质故障、自然灾害、人为破坏、供电问题）；有计划的（日常任务、运维相关、升级相关）。</li>
-  <li>故障原因分类：网络、性能、安全、运维、管理、硬件。</li>
-  <li>故障不可避免：故障是正常的，而且是常见的；故障是不可预测突发的，而且相当难缠。所以，不要尝试着去避免故障，而是要把处理故障的代码当成正常的功能做在架构里写在代码里。</li>
+  <li>CAP理论：在分布式的服务架构中，一致性（Consistency）、可用性（Availability）、分区容忍性（Partition Tolerance），最多只能满足其中两个。</li>
+  <li>ACID：即原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）、持久性（Durability）。强调一致性（CAP的C）。</li>
+  <li>BASE：基本可用（Basic Availability）、软状态（Soft State）、最终一致性（Eventual Consistency）。强调可用性（CAP的A）。</li>
+  <li>ACID和BASE比较：ACID有更强的一致性，可伸缩性差；BASE的一致性较弱，可伸缩性很好，还可以异步批量处理。大多数分布式事务适合BASE。</li>
+  <li>业务补偿：努力地把一个业务流程执行完成、如果执行不下去，需要启动补偿机制，回滚业务流程。</li>
+  <li>业务补偿的设计重点：服务方支撑幂等性、上游有重试机制；控制整个业务流程的高可用的工作流引擎；设计业务的反向补偿流程；强业务相关很难做成通用的；下层业务方提供短期资源预留机制（下单后15分钟支付时间）。</li>
 </ol>
 
 
-  </div><a class="u-url" href="/code/2019/12/24/cxze60-day09.html" hidden></a>
+  </div><a class="u-url" href="/code/2019/12/30/cxze60-day15.html" hidden></a>
 </article>
 
       </div>

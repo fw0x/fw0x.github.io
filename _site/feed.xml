@@ -1,6 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-25T21:38:19+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">fw0x</title><subtitle>Stay hungry, stay foolish.</subtitle><entry><title type="html">【60天重学左耳】Day10-弹力设计篇之“隔离设计”</title><link href="http://localhost:4000/code/2019/12/25/cxze60-day10.html" rel="alternate" type="text/html" title="【60天重学左耳】Day10-弹力设计篇之“隔离设计”" /><published>2019-12-25T21:00:00+08:00</published><updated>2019-12-25T21:00:00+08:00</updated><id>http://localhost:4000/code/2019/12/25/cxze60-day10</id><content type="html" xml:base="http://localhost:4000/code/2019/12/25/cxze60-day10.html">&lt;p&gt;&lt;a href=&quot;https://time.geekbang.org/column/article/177414?utm_term=zeusL3AA0&amp;amp;utm_source=wechat&amp;amp;utm_medium=chongxuedaka&quot;&gt;左耳朵耗子带你重学《左耳听风》&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-30T20:36:35+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">fw0x</title><subtitle>Stay hungry, stay foolish.</subtitle><entry><title type="html">【60天重学左耳】Day15-弹力设计篇之“补偿事务“</title><link href="http://localhost:4000/code/2019/12/30/cxze60-day15.html" rel="alternate" type="text/html" title="【60天重学左耳】Day15-弹力设计篇之“补偿事务“" /><published>2019-12-30T20:00:00+08:00</published><updated>2019-12-30T20:00:00+08:00</updated><id>http://localhost:4000/code/2019/12/30/cxze60-day15</id><content type="html" xml:base="http://localhost:4000/code/2019/12/30/cxze60-day15.html">&lt;p&gt;&lt;a href=&quot;https://time.geekbang.org/column/article/177414?utm_term=zeusL3AA0&amp;amp;utm_source=wechat&amp;amp;utm_medium=chongxuedaka&quot;&gt;左耳朵耗子带你重学《左耳听风》&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;打卡Day10：今天学习了《42｜弹力设计篇之“认识故障和弹力设计”》，我的收获如下：&lt;/p&gt;
+&lt;p&gt;打卡Day15：今天学习了《46｜弹力设计篇之“补偿事务”》，我的收获如下：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;CAP理论：在分布式的服务架构中，一致性（Consistency）、可用性（Availability）、分区容忍性（Partition Tolerance），最多只能满足其中两个。&lt;/li&gt;
+  &lt;li&gt;ACID：即原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）、持久性（Durability）。强调一致性（CAP的C）。&lt;/li&gt;
+  &lt;li&gt;BASE：基本可用（Basic Availability）、软状态（Soft State）、最终一致性（Eventual Consistency）。强调可用性（CAP的A）。&lt;/li&gt;
+  &lt;li&gt;ACID和BASE比较：ACID有更强的一致性，可伸缩性差；BASE的一致性较弱，可伸缩性很好，还可以异步批量处理。大多数分布式事务适合BASE。&lt;/li&gt;
+  &lt;li&gt;业务补偿：努力地把一个业务流程执行完成、如果执行不下去，需要启动补偿机制，回滚业务流程。&lt;/li&gt;
+  &lt;li&gt;业务补偿的设计重点：服务方支撑幂等性、上游有重试机制；控制整个业务流程的高可用的工作流引擎；设计业务的反向补偿流程；强业务相关很难做成通用的；下层业务方提供短期资源预留机制（下单后15分钟支付时间）。&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">左耳朵耗子带你重学《左耳听风》</summary></entry><entry><title type="html">【60天重学左耳】Day12-弹力设计篇之“服务的状态“</title><link href="http://localhost:4000/code/2019/12/27/cxze60-day12.html" rel="alternate" type="text/html" title="【60天重学左耳】Day12-弹力设计篇之“服务的状态“" /><published>2019-12-27T23:00:00+08:00</published><updated>2019-12-27T23:00:00+08:00</updated><id>http://localhost:4000/code/2019/12/27/cxze60-day12</id><content type="html" xml:base="http://localhost:4000/code/2019/12/27/cxze60-day12.html">&lt;p&gt;&lt;a href=&quot;https://time.geekbang.org/column/article/177414?utm_term=zeusL3AA0&amp;amp;utm_source=wechat&amp;amp;utm_medium=chongxuedaka&quot;&gt;左耳朵耗子带你重学《左耳听风》&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;打卡Day12：今天学习了《45｜弹力设计篇之“服务的状态”》，我的收获如下：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;状态：就是为了保留程序的一些数据或是上下文。比如登陆Session、业务逻辑运行上下文Context。&lt;/li&gt;
+  &lt;li&gt;函数式编程：immutable不变的，只描述其逻辑和算法，根本不保存数据，也不会修改输入的数据，而是把计算好的结果返回出去。&lt;/li&gt;
+  &lt;li&gt;无状态服务Stateless：分布式服务设计的最佳实践和铁律，扩展性和运维方便，可以随意增减节点，随意搬迁，无明显副作用。需要保状态保存到第三方有状态的存储服务，如Redis、MySQL、Zookeeper、Etcd、或分布式文件系统。缺点是增加了网络开销，而在本地缓存有会浪费资源。&lt;/li&gt;
+  &lt;li&gt;有状态服务Steteful的好处：数据本地化（Data Locality）；更高的可用性和更强的一致性，即CAP的AC。&lt;/li&gt;
+  &lt;li&gt;无状态服务把数据同步到不同节点，有状态服务通过Sticky Session做数据分片。&lt;/li&gt;
+  &lt;li&gt;Sticky Session的实现方式：持久化的长连接（一致性哈希、uid求模）；Gossip协议（节点间互相同步元数据）。&lt;/li&gt;
+  &lt;li&gt;服务状态的容错设计：Sticky Session的方式在实际运维过程中复杂度太高；最好利用分布式文件系统，在节点挂掉时快速启动新实例。&lt;/li&gt;
+  &lt;li&gt;很多系统的高可用设计会采取数据在运行时就复制的方案，比如：ZooKeeper、Kafka、Redis 或是 ElasticSearch 等等。强一致性的系统一般会使用两阶段提交。&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">左耳朵耗子带你重学《左耳听风》</summary></entry><entry><title type="html">【60天重学左耳】Day11-弹力设计篇之“异步通讯设计”和“幂等性设计“</title><link href="http://localhost:4000/code/2019/12/26/cxze60-day11.html" rel="alternate" type="text/html" title="【60天重学左耳】Day11-弹力设计篇之“异步通讯设计”和“幂等性设计“" /><published>2019-12-26T23:30:00+08:00</published><updated>2019-12-26T23:30:00+08:00</updated><id>http://localhost:4000/code/2019/12/26/cxze60-day11</id><content type="html" xml:base="http://localhost:4000/code/2019/12/26/cxze60-day11.html">&lt;p&gt;&lt;a href=&quot;https://time.geekbang.org/column/article/177414?utm_term=zeusL3AA0&amp;amp;utm_source=wechat&amp;amp;utm_medium=chongxuedaka&quot;&gt;左耳朵耗子带你重学《左耳听风》&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;打卡Day11：今天学习了《43｜弹力设计篇之“异步通讯设计”》和《44｜弹力设计篇之“幂等性设计”》，我的收获如下：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;通讯一般分同步和异步。同步通讯就像打电话，需要实时响应，而异步通讯就像发邮件，不需要马上回复。&lt;/li&gt;
+  &lt;li&gt;同步调用的问题：需要被调用方的吞吐不低于调用方的吞吐（整个同步调用链的性能会由最慢的那个服务所决定）；调用方一直在等待被调用方完成（并发较高场景极度消耗资源）；只能是一对一的，很难做到一对多；被调用方有问题，其调用方跟着出问题（多米诺骨牌效应）。&lt;/li&gt;
+  &lt;li&gt;异步通讯的好处：增加系统的吞吐量，让服务间的解耦更为彻底，让系统的调用方和被调用方按照自己的速率来处理，系统更有弹力。&lt;/li&gt;
+  &lt;li&gt;异步通讯的方式：请求响应（直接请求接收方，异步回调）；直接订阅（接收方向发送方订阅事件，从消息队列获取请求，无状态只依赖事件）；中间人Broker订阅（接收方向Broker订阅消息，发送方向Broker发送消息，互相看不到对方）。&lt;/li&gt;
+  &lt;li&gt;事件驱动设计：订阅式和Broker都是事件驱动架构（EDA – Event Driven Architecture），Broker更优。Broker需要的特性：高可用、高性能、可以水平扩展、数据持久化。&lt;/li&gt;
+  &lt;li&gt;事件驱动方式的好处：服务间无依赖，服务可重用或被替换；服务的开发、测试、运维高度隔离；服务间不会相互阻塞block；更容易增加Adapter（日志、认证、版本、限流、降级、熔断等）；服务间的吞吐更大，可以按照自己速度来处理）。&lt;/li&gt;
+  &lt;li&gt;事件驱动方式的缺点：架构变复杂，需要可视化工具呈现整体业务流程；事件可能乱序，需要管理好状态机；事务处理变复杂，要么两阶段提交做强一致性，要么退缩到最终一致性。&lt;/li&gt;
+  &lt;li&gt;异步通讯的注意事项：Broker高可用、服务消息跟踪机制、业务状态总控如银行的对账程序；幂等处理。&lt;/li&gt;
+  &lt;li&gt;所谓幂等性设计，就是说，一次和多次请求某一个资源应该具有同样的副作用。用数学的语言来表达就是：f(x) = f(f(x))。&lt;/li&gt;
+  &lt;li&gt;服务调用的结果：成功（Success），失败（Failed），超时（Timeout）。超时原因包括：请求没有到，请求到了返回结果没有正常返回。超时是完全不知道是什么状态，所以需要解决，手段包括：查询调用结果；被调用服务实现幂等性。&lt;/li&gt;
+  &lt;li&gt;分布式系统实现幂等性，需要实现全局ID（如Twitter的 Snowflake）&lt;/li&gt;
+  &lt;li&gt;幂等性接口的一般处理流程：收到交易请求时，到存储中去查询。如果查找到了，就把上次做的结果返回。如果没有查到，那么我们就记录下来。&lt;/li&gt;
+  &lt;li&gt;HTTP的幂等性：GET/HEAD/OPTIONS/DELETE/PUT满足幂等，POST不满足幂等。&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">左耳朵耗子带你重学《左耳听风》</summary></entry><entry><title type="html">【60天重学左耳】Day10-弹力设计篇之“隔离设计”</title><link href="http://localhost:4000/code/2019/12/25/cxze60-day10.html" rel="alternate" type="text/html" title="【60天重学左耳】Day10-弹力设计篇之“隔离设计”" /><published>2019-12-25T21:00:00+08:00</published><updated>2019-12-25T21:00:00+08:00</updated><id>http://localhost:4000/code/2019/12/25/cxze60-day10</id><content type="html" xml:base="http://localhost:4000/code/2019/12/25/cxze60-day10.html">&lt;p&gt;&lt;a href=&quot;https://time.geekbang.org/column/article/177414?utm_term=zeusL3AA0&amp;amp;utm_source=wechat&amp;amp;utm_medium=chongxuedaka&quot;&gt;左耳朵耗子带你重学《左耳听风》&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;打卡Day10：今天学习了《42｜弹力设计篇之“隔离设计”》，我的收获如下：&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;隔离设计Bulkheads，源于造船上的隔板技术，也就是船体水密舱。&lt;/li&gt;
@@ -85,271 +127,4 @@
   &lt;li&gt;提高性能技术包括：缓存、负载均衡、异步调用、数据分区或镜像。&lt;/li&gt;
   &lt;li&gt;提高稳定性技术包括：服务拆分、服务冗余、限流降级、高可用架构、高可用运维。&lt;/li&gt;
   &lt;li&gt;分布式系统的纲，即最最核心的东西：全栈系统监控、服务/资源调度、流量调度、状态/数据调度、开发和运维的自动化。&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">左耳朵耗子带你重学《左耳听风》</summary></entry><entry><title type="html">【60天重学左耳】Day01-分布式架构的发展背景以及难点</title><link href="http://localhost:4000/code/2019/12/16/cxze60-day01.html" rel="alternate" type="text/html" title="【60天重学左耳】Day01-分布式架构的发展背景以及难点" /><published>2019-12-16T20:00:00+08:00</published><updated>2019-12-16T20:00:00+08:00</updated><id>http://localhost:4000/code/2019/12/16/cxze60-day01</id><content type="html" xml:base="http://localhost:4000/code/2019/12/16/cxze60-day01.html">&lt;p&gt;&lt;a href=&quot;https://time.geekbang.org/column/article/177414?utm_term=zeusL3AA0&amp;amp;utm_source=wechat&amp;amp;utm_medium=chongxuedaka&quot;&gt;左耳朵耗子带你重学《左耳听风》&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;打卡Day1：今天学习了《21｜分布式系统架构的冰与火》和《22｜从亚马逊的实践，谈分布式系统的难点》，我的收获如下：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;使用分布式系统主要原因包括：增大系统容量；加强系统可用。&lt;/li&gt;
-  &lt;li&gt;分布式系统并不是完美的技术方案，解决了问题的同时会带来其他问题，没有银弹，对于架构师来说是一种权衡。&lt;/li&gt;
-  &lt;li&gt;了解了分布式系统和传统单体架构的各种优缺点。优点是解决了“单点”和“性能容量”问题；缺点是系统设计、管理和运维变得困难和复杂。&lt;/li&gt;
-  &lt;li&gt;分布式系统大体经历了单体架构、SOA架构和微服务架构三个阶段。&lt;/li&gt;
-  &lt;li&gt;微服务架构需要好的微服务PaaS平台来支撑，简化集成测试、运维和服务管理。&lt;/li&gt;
-  &lt;li&gt;分布式架构思想实践最早的公司亚马逊，早在2002年就颁布了很有前瞻性的几条架构规定，最重要的一条：所有程序模块都要通过接口来访问数据。AWS由此诞生。&lt;/li&gt;
-  &lt;li&gt;亚马逊在运维分布式服务有几点值得借鉴：分布式团队架构、严重故障整体查错、开发人员做所有事情（测试、运维）、崇尚简化和自动化、内部服务和外部服务一致对待。&lt;/li&gt;
-  &lt;li&gt;分布式服务架构是需要从组织，到软件工程，再到技术上的一个大的改造，需要比较长的时间来磨合和改进。&lt;/li&gt;
-  &lt;li&gt;分布式系统构建最好统一编程语言，避免异构系统带来的各种不标准问题，简化开发、测试和运维标准。&lt;/li&gt;
-  &lt;li&gt;分布式系统需要定义出关键服务调用的主要路径，为运维提供管理依据。不但要拆分服务，还要为每个服务拆分相应的数据库。&lt;/li&gt;
-  &lt;li&gt;分布式系统出现故障不可怕，故障恢复时间过长或影响面过大才可怕。监控指标不需要太多，SLA要求我们定义出关键指标。在设计或运维系统时都要考虑如何减轻故障，争取做到，人管代码，代码管机器，人不管机器。&lt;/li&gt;
-  &lt;li&gt;系统通常可分为四层：基础层、平台层、应用层和接入层。任何一层的问题都会导致整体的问题，需要有统一的视图和管理降低运维复杂度。多层架构的运维分工，一定要重视协作是否统一和规范。&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">左耳朵耗子带你重学《左耳听风》</summary></entry><entry><title type="html">【读书笔记】自在独行——写给每个孤独的行路人</title><link href="http://localhost:4000/read/2019/10/07/walk-alone+to-every-lonely-walker.html" rel="alternate" type="text/html" title="【读书笔记】自在独行——写给每个孤独的行路人" /><published>2019-10-07T20:00:00+08:00</published><updated>2019-10-07T20:00:00+08:00</updated><id>http://localhost:4000/read/2019/10/07/walk-alone+to-every-lonely-walker</id><content type="html" xml:base="http://localhost:4000/read/2019/10/07/walk-alone+to-every-lonely-walker.html">&lt;ul&gt;
-  &lt;li&gt;书名：自在独行——写给每个孤独的行路人&lt;/li&gt;
-  &lt;li&gt;作者：贾平凹&lt;/li&gt;
-  &lt;li&gt;出版社：长江文艺出版社&lt;/li&gt;
-  &lt;li&gt;阅读日期：2019年10月5日～10月7日&lt;/li&gt;
-  &lt;li&gt;耗时：17小时&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;书籍背景&quot;&gt;书籍背景&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;独行是一场心灵的隐居，真正的洒脱来自内心安宁。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;第一章 孤独地走向未来。生命的睿智——从容是真&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;第二章 默默看世界。人世的悲心——宽释是福&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;第三章 独自走一走。大地的魂灵——有敬无畏&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;第四章 独处的安宁。万物的情怀——乐以忘忧&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;第五章 自在的禅意。天空的禅意——行于天地&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;书摘笔记&quot;&gt;书摘/笔记&lt;/h2&gt;
-
-&lt;h3 id=&quot;目录第二章&quot;&gt;《目录——第二章》&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;世上的事，认真不对，不认真更不对，执着不对，一切视作空也不对，平平常常，自自然然，如上山拜佛，见佛像了就磕头，磕了头，佛像还是佛像，你还是你——生活之累就该少下来了。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;==批注：平常心对待身边的人和事，不过分较真。==&lt;/p&gt;
-
-&lt;h3 id=&quot;孤独地走向未来p48&quot;&gt;《孤独地走向未来》P48&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;好多人在说自己孤独，说自己孤独的人其实并不孤独。孤独不是受到了冷落和遗弃，而是无知己，不被理解。真正的孤独不言孤独，偶尔做些长啸，如我们看到的兽。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;我见过相当多的郁郁寡欢者，也见过一些把皮肤和毛发弄得怪异的人，似乎要做孤独，这不是孤独，是孤僻，&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;尘世上并不会轻易让一个人孤独的，群居需要一种平衡，嫉妒而引发的诽谤、扼杀、羞辱、打击和迫害，你若不再脱颖，你将平凡，你若继续走，走，终于使众生无法赶超了，众生就会向你欢呼和崇拜，尊你是神圣。神圣是真正的孤独。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;走向孤独的人难以接受怜悯和同情。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;==批注：耐得住寂寞，看得见繁华。==&lt;/p&gt;
-
-&lt;h3 id=&quot;好读书p54&quot;&gt;《好读书》P54&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;好读书不一定都是好丈夫，好读书不一定都有好人缘，好读书性情古怪。但是能读书必有读书的好，譬如能识天地之大，能晓人生之难，有自知之明，有预料之先，不为苦而悲，不受宠而欢，寂寞时不寂寞，孤单时不孤单，所以绝权欲，弃浮华，潇洒达观，于嚣烦尘世而自尊自重自强自立不卑不亢不谄。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;==批注：读书不带目的，总有收获。==&lt;/p&gt;
-
-&lt;h3 id=&quot;舍得p59&quot;&gt;《舍得》P59&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;会活的人，或者说取得成功的人，其实懂得了两个字：舍得。不舍不得，小舍小得，大舍大得。回顾我们经历过的事吧，许多时候我们因没有小忍而坏了大谋，许多时候我们吃了一点亏懊丧不已，不久却赢取了利好，为了保持我们的本真没有被一时的浮华迷惑，声名太盛则又使我们失去了行动的自在。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;==批注：一个人一生中能做成一件事，就很了不起了。==&lt;/p&gt;
-
-&lt;h3 id=&quot;看人p72&quot;&gt;《看人》P72&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;上帝无言，冷眼看世上忙人。到了这时，你境界再次升华，恍惚间你就是上帝在看这一切，你醒悟到人活着是多么无聊又多么有意义，人世间是多么简单又多么复杂。这样，在街头上看一回人的风景，犹如读一本历史，一本哲学，你从此看问题、办事情，心胸就不再那么窄了，目光就不那么短了，不会为蝇头小利去钩心斗角，不会因一时荣辱而狂妄和消沉，人既然如蚂蚁一样来到世上，忽生忽死，忽聚忽散，短短数十年里，该自在就自在吧，该潇洒就潇洒吧，各自完满自己的一段生命，这就是生存的全部意义了。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;==批注：珍惜每一天，做自己喜欢的事。==&lt;/p&gt;
-
-&lt;h3 id=&quot;名人p101&quot;&gt;《名人》P101&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;世事真闹不明白，你忽然浪成了一个名人。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;你成了名人，你的一切都令人们刮目相看，你本来是很丑的，但总有人在你的丑貌里寻出美的部分，你实在是邋遢，头发乱如茅草，胡子不刮，衣服发皱，但现在你是名人，名人的不修边幅是别一种的潇洒呀！&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;你不愿别人以名人对待你，你又毕竟意识到自己是名人而又处处以名人来限制自己。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;==批注：名人放个屁都真香，成为名人也要付出代价。==&lt;/p&gt;
-
-&lt;h3 id=&quot;朋友p108&quot;&gt;《朋友》P108&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;地球上人类最多，但你一生的交往最多的却不外乎方圆几里或十几里，朋友的圈子其实就是你人生的世界，你为名为利的奋斗历程就是朋友的好与恶的历史。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;==批注：交朋友贵在真字。==&lt;/p&gt;
-
-&lt;h3 id=&quot;说奉承p112&quot;&gt;《说奉承》P112&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;每个人少不了有奉承，再是英雄，多么正直，最少他在恋爱时有奉承行为。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;奉承话吧——并不是错误，它发乎于天性，出自于真诚的热爱美好。而不能忍受的，浑身要起鸡皮疙瘩，发麻的，是对一些并不发乎于真诚的奉承。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;奉承是要得法的，会奉承的人都是语言大师。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;==批注：真诚的赞美。==&lt;/p&gt;
-
-&lt;h3 id=&quot;关于父子p126&quot;&gt;《关于父子》P126&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;一个儿子酷像他的父亲，做父亲的就要得意了。世上有了一个小小的自己的复制品，时时对着欣赏，如镜中的花水中的月，这无疑比仅仅是个儿子自豪得多。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;做父亲的都希望自己的儿子像蛇蜕皮一样的始终是自己，但儿子却相当愿意像蝉蜕壳似的裂变。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;中国的传统里，有“严父慈母”之说，所以在初为人父时可以对任何事情宽容放任，对儿子却一派严厉，少言语，多板脸，动辄吼叫挥拳。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;儿子稍稍独立，儿子与父亲的意见就不统一了，愈是与父亲相悖，这儿子就愈是优秀人物。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;只有在儿子开始做了父亲，这父亲才有觉悟对自己的父亲好起来，可以与父亲在一条凳子上坐下，可以翘二郎腿，共同地衔一支烟吸，共同拔下巴上的胡须。但是，做父亲的已经丧失了一个男人在家中的真正权势后，对于儿子的能促膝长谈的态度却很有几分苦楚，或许明白这如同一个得胜的将军盛情款待一个败将只能显得人家宽大为怀一样，儿子的恭敬即使出自真诚，父亲在本能的潜意识里仍觉得这是一种耻辱，于是他开始钟爱起孙子了。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;但爷爷对孙子不论怎样地好，孙子都是不记恩地。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;作为男人的一生，是儿子也是父亲。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;==批注：所有的事情只有自己亲身经历过，才可能理解的更深刻，父亲说是没有用的。==&lt;/p&gt;
-
-&lt;h3 id=&quot;说孩子p131&quot;&gt;《说孩子》P131&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;有了孩子，谁都希望孩子小时候乖，长大了有出息。结婚生育，原本是极自然的事，瓜熟蒂落，草大结籽，现在把生儿育女看得不得了了，照仪器呀，吃保胎药呀，听音乐看画报胎教呀，提前去医院，羊水未破就呼天喊地，结果十个有九个难产，八个有七个产后无奶。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;做父母的全盼望孩子出人头地、就闹出许多畸形的事体来。有人以教孩子背唐诗为荣耀，家有客人，就呼出小儿，一首一首闭了眼睛往下背。但我从没见过小时能背唐诗的“神童”长大了有作为的人。有人省吃俭用地买钢琴买绘画的颜料笔纸呀，用金钱加拳头要培养个音乐家和画家，结果只能培养出一大批挣便宜钱的半通不通的“辅导”。社会是各色人等组成的，是什么神就归什么位，父母养育儿女，生下来养活了，施之于正常的教育就完成了责任，而硬要是河不让流，盛方缸里让成方，装圆盆中让成圆，没有不徒劳的，如果人人都是撒切尔夫人，人人都是艺术家，这个世界将是多么可怕！接触这样的大人们多了，就会发现，愈是这般强烈地要培养儿女的人，愈是这人活得平庸。他自己活得没自信了，就寄托儿女。儿女的生命是属于儿女的，不必担心没有你的设计儿女就一事无成，相反，生命是不能承受之轻和之重的，教给了他做人的起码道德和奋斗的精神，有正规的学校传授知识和技能，更有社会的大学校传授人生的经验，每一个生命自然而然地会发出自己灿烂的光芒的。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;可以说，人是很难认识自己的，这如眼睛看不见眼睛一样。但认识自己，设计自己却是人至关重要的事！天才不是三百年才出现一个两个的，天才是每个人都存在的，关键是是否发现自己身上的天才潜能。遗憾的是很多很多的人至死没有发现和发展自己的天才潜能，所以，伟大的人物总是少，众生才芸芸。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;我也是一个父亲，我也为我的独生女儿焦虑过，生气过，甚至责骂过，也曾想，我的孩子如果一生下来就有我当时的思维和见解多好啊，为什么我从一学起，好容易学些文化了，我却一天天老起来，我的孩子又是从一学起？！但当我慢慢产生了我的观点后，我不再以我的意志去塑造孩子，只要求她有坚韧不拔的精神，只强调和引导她从小干什么事情都必须有兴趣，譬如踢沙包，你就尽情地去踢，画图画，你就随心所欲地画。我反对要去做什么家，你首先做人，做普通的人。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;我虽然常常看着小学生、中学生不分昼夜地在书桌前用功，心中充满了悲哀——大人们都在自己的岗位上消极怠工，却把恶果转嫁于孩子。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;==批注：帮孩子发现自己身上特有的潜能，让每一个生命自然而然地发出自己灿烂的光芒。==&lt;/p&gt;
-
-&lt;h3 id=&quot;说房子p135&quot;&gt;《说房子》P135&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;人活在世上需要房子，人死了也需要房子，乡下的要做棺、拱墓，城里的有骨灰盒。其实，人是从泥土里来的，最后又化为泥土，任何形式的房子，生前死后，装什么呢？有一个字，囚，是人被四周围住了。房子是囚人的，人寻房子，自己把自己囚起来，这有点像投案自首。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;书上写着的是：家是避风港，家是安乐窝。有房子当然不能算家，有妻子儿女却没有房，也不算完整的家。房间如何布置，家庭如何经营都不重要，睡草铺如果能起鼾声，绝对比睡在席梦思沙发床上辗转不眠为好。用不着热羡和嫉妒他人的千般好，用不着哀叹和怨恨自己的万般苦，也用不着耻笑和贱看别人不如自己，生命的快乐并不在于穷与富、贵与贱。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;==批注：房子是身外之物，生不带来死不带去，家人才是更重要的。==&lt;/p&gt;
-
-&lt;h3 id=&quot;说女人p143&quot;&gt;《说女人》P143&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;独立做女人的人格，热情地对待生活，对待自己，为自己而活，活得美好，女人越会对男人产生永久的吸引，这就是平等，与男人平等是真正地活出了女人味。有了这种与男人平等地生存于世上，平等地做夫妻的女人味，或许长得漂亮，或许长得不漂亮，但自然而然地就产生了你的态。态是古时用语，态无法言说，类似当今人所谈的气质和风度。女人的漂亮不会永驻，女人的态却长伴终生。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;==批注：女人要活出自己，活出自己的态。==&lt;/p&gt;
-
-&lt;h3 id=&quot;说美容p145&quot;&gt;《说美容》P145&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;化妆的盛行，使女人越来越失去自信。谁还敢素面朝天？“女容为悦”从古代一路喊下来，现在似乎已是生活得越好，物质越丰富，女人的所悦者越少，情爱越难得。因为现代城市的女人就比乡下女人化妆得严重。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;打扮一旦成了社会时尚，风气靡丽，必然少了清正之气。过去有一句名言：最容易打扮的是历史和小姑娘。现在呢？没有学问的打扮得更像有学问，不是艺术家的打扮得更像艺术家，戏比生活逼真，谎言比真理流行。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;当一切都在打扮，全没有了真面目示人的时候，最美丽的打扮是不打扮。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;==批注：打扮要得当，不要失去了本真的模样。==&lt;/p&gt;
-
-&lt;h3 id=&quot;说死p152&quot;&gt;《说死》P152&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;既然死是人的最后归宿，既然寿的长短是闻道的迟早，既然闻道而死去的时候是一种解脱和幸福，对于死应该坦然。而恐惧的人，不能正确地面对死去，也绝不会正确地面对活着。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;不管怎样地美好来到人世的情景，又怎样地不愿去死，最后都是死了。这人生的一趟旅游是旅游好了还是旅游不好，每个人都有自己的体会。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;==批注：人固有一死，或轻于鸿毛，或重于泰山，都是每个人自己的选择，没有好坏对错。==&lt;/p&gt;
-
-&lt;h2 id=&quot;总结收获&quot;&gt;总结&amp;amp;收获&lt;/h2&gt;
-
-&lt;p&gt;写文章要随心所欲，写出自己内心真正想表达的东西，切忌生搬硬套。&lt;/p&gt;</content><author><name></name></author><summary type="html">书名：自在独行——写给每个孤独的行路人 作者：贾平凹 出版社：长江文艺出版社 阅读日期：2019年10月5日～10月7日 耗时：17小时</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2019/09/15/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-09-15T18:16:14+08:00</published><updated>2019-09-15T18:16:14+08:00</updated><id>http://localhost:4000/jekyll/update/2019/09/15/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/09/15/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Where &lt;code class=&quot;highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">左耳朵耗子带你重学《左耳听风》</summary></entry></feed>

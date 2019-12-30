@@ -3,19 +3,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>【60天重学左耳】Day09-弹力设计篇之“认识故障和弹力设计” | fw0x</title>
+<title>【60天重学左耳】Day12-弹力设计篇之“服务的状态“ | fw0x</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="【60天重学左耳】Day09-弹力设计篇之“认识故障和弹力设计”" />
+<meta property="og:title" content="【60天重学左耳】Day12-弹力设计篇之“服务的状态“" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="左耳朵耗子带你重学《左耳听风》" />
 <meta property="og:description" content="左耳朵耗子带你重学《左耳听风》" />
-<link rel="canonical" href="http://localhost:4000/code/2019/12/24/cxze60-day09.html" />
-<meta property="og:url" content="http://localhost:4000/code/2019/12/24/cxze60-day09.html" />
+<link rel="canonical" href="http://localhost:4000/code/2019/12/27/cxze60-day12.html" />
+<meta property="og:url" content="http://localhost:4000/code/2019/12/27/cxze60-day12.html" />
 <meta property="og:site_name" content="fw0x" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-12-24T23:30:00+08:00" />
+<meta property="article:published_time" content="2019-12-27T23:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"左耳朵耗子带你重学《左耳听风》","datePublished":"2019-12-24T23:30:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/code/2019/12/24/cxze60-day09.html"},"@type":"BlogPosting","url":"http://localhost:4000/code/2019/12/24/cxze60-day09.html","headline":"【60天重学左耳】Day09-弹力设计篇之“认识故障和弹力设计”","dateModified":"2019-12-24T23:30:00+08:00","@context":"https://schema.org"}</script>
+{"description":"左耳朵耗子带你重学《左耳听风》","datePublished":"2019-12-27T23:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/code/2019/12/27/cxze60-day12.html"},"@type":"BlogPosting","url":"http://localhost:4000/code/2019/12/27/cxze60-day12.html","headline":"【60天重学左耳】Day12-弹力设计篇之“服务的状态“","dateModified":"2019-12-27T23:00:00+08:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="fw0x" /></head>
 <body><header class="site-header" role="banner">
@@ -38,28 +38,30 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">【60天重学左耳】Day09-弹力设计篇之“认识故障和弹力设计”</h1>
+    <h1 class="post-title p-name" itemprop="name headline">【60天重学左耳】Day12-弹力设计篇之“服务的状态“</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="2019-12-24T23:30:00+08:00" itemprop="datePublished">Dec 24, 2019
+      <time class="dt-published" datetime="2019-12-27T23:00:00+08:00" itemprop="datePublished">Dec 27, 2019
       </time></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
     <p><a href="https://time.geekbang.org/column/article/177414?utm_term=zeusL3AA0&amp;utm_source=wechat&amp;utm_medium=chongxuedaka">左耳朵耗子带你重学《左耳听风》</a></p>
 
-<p>打卡Day9：今天学习了《41｜弹力设计篇之“认识故障和弹力设计”》，我的收获如下：</p>
+<p>打卡Day12：今天学习了《45｜弹力设计篇之“服务的状态”》，我的收获如下：</p>
 
 <ol>
-  <li>分布式系统关键的设计模式：容错（弹力Resiliency）、性能、管理。</li>
-  <li>弹力：系统在不健康、不顺，甚至出错的情况下有能力hold得住，挺得住，能在逆境中力挽狂澜。</li>
-  <li>系统可用性测量：Availability = MTTF / MTTR + MTTF​。MTTF 是 Mean Time To Failure，平均故障前的时间。MTTR 是 Mean Time To Recovery，平均修复时间。为了提高可用性，我们要么提高系统的无故障时间，要么减少系统的故障恢复时间。</li>
-  <li>故障原因：无计划的（系统级故障、数据和介质故障、自然灾害、人为破坏、供电问题）；有计划的（日常任务、运维相关、升级相关）。</li>
-  <li>故障原因分类：网络、性能、安全、运维、管理、硬件。</li>
-  <li>故障不可避免：故障是正常的，而且是常见的；故障是不可预测突发的，而且相当难缠。所以，不要尝试着去避免故障，而是要把处理故障的代码当成正常的功能做在架构里写在代码里。</li>
+  <li>状态：就是为了保留程序的一些数据或是上下文。比如登陆Session、业务逻辑运行上下文Context。</li>
+  <li>函数式编程：immutable不变的，只描述其逻辑和算法，根本不保存数据，也不会修改输入的数据，而是把计算好的结果返回出去。</li>
+  <li>无状态服务Stateless：分布式服务设计的最佳实践和铁律，扩展性和运维方便，可以随意增减节点，随意搬迁，无明显副作用。需要保状态保存到第三方有状态的存储服务，如Redis、MySQL、Zookeeper、Etcd、或分布式文件系统。缺点是增加了网络开销，而在本地缓存有会浪费资源。</li>
+  <li>有状态服务Steteful的好处：数据本地化（Data Locality）；更高的可用性和更强的一致性，即CAP的AC。</li>
+  <li>无状态服务把数据同步到不同节点，有状态服务通过Sticky Session做数据分片。</li>
+  <li>Sticky Session的实现方式：持久化的长连接（一致性哈希、uid求模）；Gossip协议（节点间互相同步元数据）。</li>
+  <li>服务状态的容错设计：Sticky Session的方式在实际运维过程中复杂度太高；最好利用分布式文件系统，在节点挂掉时快速启动新实例。</li>
+  <li>很多系统的高可用设计会采取数据在运行时就复制的方案，比如：ZooKeeper、Kafka、Redis 或是 ElasticSearch 等等。强一致性的系统一般会使用两阶段提交。</li>
 </ol>
 
 
-  </div><a class="u-url" href="/code/2019/12/24/cxze60-day09.html" hidden></a>
+  </div><a class="u-url" href="/code/2019/12/27/cxze60-day12.html" hidden></a>
 </article>
 
       </div>
