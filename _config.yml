@@ -1,53 +1,57 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you: 
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# Site Settings
+baseurl: ""
+url : "https://fw0x.github.io"
+author: fw0x 
 
-title: fw0x
-email: fw0x@qq.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Stay hungry, stay foolish.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: jekyllrb
-github_username:  fw0x
+# Blog Settings
+theme_settings :
+  title : fx0x | Stay hungry, Stay foolish.
+  favicon : assets/favicon.ico
 
-# Build settings
-theme: minima
-plugins:
-  - jekyll-feed
+  # Profile Settings
+  profile :
+    image : assets/img/smile.png
+    username : fw0x
+    description : Hi! I am a programmer. I like play guitar.
+    experience :
+      - start : 2018-07
+        end : "?"
+        experience : ":>/, Programmer"
+      - start : 2012-01
+        end : "2018-07"
+        experience : "GIONEE, Programmer"        
+    skills : 
+      - skill : Java
+        value : 85  # Percent value
+      - skill : Distributed System
+        value : 85
+      - skill : Cloud Computing
+        value : 80
+        
+  # Icons
+  icons :
+    email: fw0x@qq.com # Full email address, e.g. "sample@google.com"
+    linkedin:  # Full URL 
+    github: fw0x
+    gitlab: 
+    bitbucket: 
+    google_plus:
+    twitter:
+    youtube:
+    facebook:
+    instagram:
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+  # Disqus
+  disqus_shortname :
+
+# Pagination
+paginate: 5
+paginate_path: "blog/page:num"
+
+# Build Ssttings
+sass:
+  sass_dir: _sass
+  style: :compressed
+plugins: [jekyll-paginate]
+bootstrap:
+  assets: true

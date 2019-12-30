@@ -1,8 +1,11 @@
 ---
 layout: post
 title:  "【读书笔记】让云触手可及——微软云计算实践指南"
+tags: [Book, Cloud]
+author: 方伟
 date:   2019-09-09 20:00:00 +0800
 categories: read
+comments : True
 ---
 
 * 书名：让云触手可及——微软云计算实践指南

@@ -3,6 +3,8 @@ layout: post
 title:  "【读书笔记】自在独行——写给每个孤独的行路人"
 date:   2019-10-07 20:00:00 +0800
 categories: read
+tags: [Book, Prose]
+author: 方伟
 ---
 
 * 书名：自在独行——写给每个孤独的行路人
