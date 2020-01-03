@@ -1,11 +1,11 @@
 # Site Settings
 baseurl: ""
-url : "https://fw0x.github.io"
+url : "https://fangwei.fun"
 author: fw0x 
 
 # Blog Settings
 theme_settings :
-  title : fx0x | Stay hungry, Stay foolish.
+  title : fw0x
   favicon : assets/favicon.ico
 
   # Profile Settings
