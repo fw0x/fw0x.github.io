@@ -27,7 +27,7 @@ layout: default
                 {% if post.excerpt.size > 50 %}
                 {{ post.excerpt | strip_html | strip_newlines | truncatewords: 25, '...' }}
                 {% else %}
-                {{ post.subtitle }}
+                {{ post.excerpt }}
                 {% endif %}
               </p>
               <div>
