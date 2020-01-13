@@ -1,17 +1,16 @@
 # Site Settings
 baseurl: ""
 url : "https://fangwei.fun"
-author: fw0x 
 
 # Blog Settings
 theme_settings :
-  title : fw0x
+  title : 淡定
   favicon : assets/favicon.ico
 
   # Profile Settings
   profile :
     image : assets/img/smile.png
-    username : fw0x
+    username : 方伟
     description : Hi! I am a programmer. I like play guitar.
     experience :
       - start : 2018-07
@@ -26,7 +25,7 @@ theme_settings :
       - skill : Distributed System
         value : 85
       - skill : Cloud Computing
-        value : 80
+        value : 75
         
   # Icons
   icons :
