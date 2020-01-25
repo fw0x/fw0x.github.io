@@ -18,7 +18,7 @@ theme_settings :
         experience : "/>:, Programmer"
       - start : 2012-01
         end : "2018-07"
-        experience : "GIONEE, Programmer"        
+        experience : "GIONEE, Programmer"
     skills : 
       - skill : Java
         value : 85  # Percent value
@@ -33,7 +33,7 @@ theme_settings :
     linkedin:  # Full URL 
     github: fw0x
     gitlab: 
-    bitbucket: 
+    bitbucket:
     google_plus:
     twitter:
     youtube:
@@ -42,6 +42,9 @@ theme_settings :
 
   # Disqus
   disqus_shortname :
+
+# Post
+excerpt_separator: <!--more-->
 
 # Pagination
 paginate: 5
