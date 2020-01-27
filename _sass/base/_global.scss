@@ -24,8 +24,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	vertical-align: baseline;
-	word-break: break-all;
-	font-size: 1.05rem;
+	word-break: break-word;
     line-height: 1.5em;
 }
 /* HTML5 display-role reset for older browsers */
@@ -41,26 +40,28 @@ h1, h2, h3, h4, h5, h6{
 	font-weight: 600;
 }
 h1 {
-	font-size : 1.8rem;
+	font-size : 2.0rem;
 }
 h2 {
-	font-size : 1.6rem;
+	font-size : 1.8rem;
 }
 h3 {
-	font-size : 1.4rem;
+	font-size : 1.6rem;
 }
 h4 {
-	font-size : 1.3rem;
+	font-size : 1.4rem;
 }
 h5 {
 	font-size : 1.2rem;
 }
 h6 {
-	font-size : 1.05rem;
+	font-size : 1.1rem;
 }
-p{
-	margin: 5px 0;
+p {
+	margin-top: 2px;
+	margin-bottom: 22px;
 }
+/*
 @media (max-width: 576px){
 	h1 {
 		font-size : 1.6rem;
@@ -83,7 +84,7 @@ p{
 	p{
 		font-size : 0.9rem;
 	}
-}
+} */
 ol, ul {
 	li { font-size: 15px; }
 }

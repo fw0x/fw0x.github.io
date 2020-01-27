@@ -1,7 +1,7 @@
 #post{
     @extend %page-padding;
     .post-header{
-        padding-bottom : 60px;
+        padding-bottom : 22px;
         text-align: center;
         .title{
             margin-bottom: 0px;
@@ -11,7 +11,7 @@
         }
         .meta{
             color : $text-gray;
-            font-size: 0.85rem;
+            font-size: 1rem;
             margin-top : 15px;
         }
     }
