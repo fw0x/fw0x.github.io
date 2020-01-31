@@ -41,7 +41,7 @@ theme_settings :
     instagram:
 
   # Disqus
-  disqus_shortname :
+  disqus_shortname: fangwei-fun
 
 # Post
 excerpt_separator: <!--more-->
