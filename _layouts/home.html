@@ -27,7 +27,7 @@ layout: default
                 {% if post.excerpt.size > 140 %}
                 {{ post.excerpt | strip_html | truncate: 140, '...' }}
                 {% else %}
-                {{ post.excerpt }}
+                {{ post.excerpt | strip_html}}
                 {% endif %}
               </p>
               <div>
