@@ -3,4 +3,5 @@ source "https://rubygems.org"
 gemspec
 
 gem 'github-pages'
-gem "jekyll-paginate"
+gem 'jekyll-paginate'
+gem 'jekyll-feed'
