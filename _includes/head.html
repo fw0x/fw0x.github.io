@@ -15,6 +15,8 @@
   <!-- CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
   <!-- OG Tag -->
   {% if page.title %}
   {% assign title = page.title | append: " - " | append: site.theme_settings.title %}
