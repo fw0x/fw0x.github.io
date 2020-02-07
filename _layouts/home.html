@@ -73,13 +73,13 @@ layout: default
           </a>
           {% endif %}
           {% for page in (min..max) %}
-          <a href="{% if page == 1 %}/{% else %}/blog/page{{ page }}{% endif %}"
+          <a href="{% if page == 1 %}/{% else %}/page/{{ page }}{% endif %}"
             class="{% if page == paginator.page %}selected{% endif %}">
             <li class="btn-rounded">{{ page }}</li>
           </a>
           {% endfor %}
           {% if max != paginator.total_pages %}
-          <a href="/blog/page{{ max | plus: 1 }}">
+          <a href="/page/{{ max | plus: 1 }}">
             <li class="btn-rounded next">
               <i class="fas fa-angle-double-right"></i>
             </li>
